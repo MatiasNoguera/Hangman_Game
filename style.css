@@ -1,0 +1,168 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background: #F3F5FC;
+}
+
+.container {
+    background: #F3F5FC;
+    padding: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 100%;
+    text-align: left; /* logo a la izquierda */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ahorcado */
+#horca {
+    display: none;
+}
+.ahorcado {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Botones de inicio */
+.botones-home {
+    text-align: center; /* Centra los botones */
+    margin-top: 300px;
+}
+
+.btn-iniciar, .btn-agregar-palabra {
+    width: 80%; /* Se adapta al 80% del contenedor */
+    max-width: 317px; /* Ancho máximo */
+    height: 50px;
+    margin: 10px auto; /* Margen automático para centrar */
+    background: #0A3871;
+    border-radius: 24px;
+    font-size: 20px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-agregar-palabra {
+    border: 1px solid #0A3871;
+    background: #FFFFFF;
+    color: #0A3871;
+}
+
+/* Teclado */
+.teclado {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Botones del juego */
+.botones {
+    display: none;
+    flex-direction: column; /* Apila los botones */
+    align-items: center; /* Centra los botones */
+    margin-top: 20px;
+}
+
+#boton-nuevojuego, #boton-desistir {
+    width: 80%; /* Se adapta al 80% del contenedor */
+    max-width: 250px; /* Ancho máximo */
+    height: auto;
+    margin: 10px 0; /* Margen superior e inferior */
+    border-radius: 20px;
+    background: #0A3871;
+    color: white; 
+    border: none;
+    padding: 10px 0;
+}
+
+/* Panel de agregar palabra */
+.panel {
+    margin: auto;
+    width: 80%;
+    max-width: 400px; /* Ancho máximo */
+    display: none;
+}
+
+#signoexclamacion {
+    display: none;
+}
+
+/* Botones guardar y cancelar */
+#guardar, #cancelar {
+    display: none;
+    width: 80%; /* Se adapta al 80% del contenedor */
+    max-width: 300px; /* Ancho máximo */
+    padding: 10px;
+    border-radius: 24px;
+    margin: 10px 415px; /* Margen automático para centrar */
+}
+
+#guardar {
+    background: #0A3871;
+    color: #FFFFFF;
+}
+
+#cancelar {
+    background: #FFFFFF;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+.ingresar-palabra {
+    width: 100%; 
+    max-width: 299px; 
+    padding: 10px;
+}
+
+/* Pie de página */
+.pie-de-pagina {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+/* Copyright */
+.copyright {
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .logo {
+        margin-left: -30px;
+    }
+    .btn-iniciar, .btn-agregar-palabra, 
+    #boton-nuevojuego, #boton-desistir,
+    #guardar, #cancelar {
+        font-size: 16px; /* Reduce el tamaño de la fuente */
+        padding: 10px 0; /* Ajusta el padding */
+        margin-left: 25px;
+    }
+
+    .ahorcado {
+        flex-direction: column; /* Cambia la dirección para pantallas pequeñas */
+    }
+
+    .teclado {
+        flex-direction: column; /* Coloca las letras en una columna */
+    }
+
+    .botones {
+        flex-direction: column; /* Coloca los botones en una columna */
+    }
+}

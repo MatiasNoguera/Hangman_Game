@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img id="logoAlura" src="images/logo.png" alt="Logo de Alura">
+        </div>
+
+        <div class="ahorcado">
+            <canvas id="horca" width="800" height="500"></canvas>
+        </div>
+
+        <div class="botones-home" id="boton-desaparece">
+            <button type="button" class="btn-iniciar" id="boton-iniciar" onclick="iniciarJuego()">Iniciar juego</button>
+            <button type="button" class="btn-agregar-palabra" id="boton-agregarpalabra" onclick="agregarPalabra()"> Agregar nueva palabra</button>  
+        </div>
+
+        <div class="teclado" id="teclado"></div>
+
+        <div class="botones" id="botones-iniciar-juego">
+            <button type="button" id="boton-nuevojuego" onclick="iniciarJuego()">Nuevo juego</button>
+            <button type="button" id="boton-desistir" onclick="desistir()">Desistir</button>
+        </div>
+
+        <div class="panel" id="panelAgregaPalabra">
+            <input class="ingresar-palabra" id="textoagregarpalabra" placeholder="Ingrese una palabra">
+        </div>         
+
+        <div class="caja" id="cajaAgregaPalabra">
+            <div class="textoysigno">
+                <p id="textoinformativo"><img class="minus" id="signoexclamacion" src="images/exclamacion.png"></p>
+            </div>
+        </div>    
+
+        <div class="buttons">
+            <button type="button" id="guardar" onclick="guardarPalabra()">Guardar y empezar</div> </button>
+            <button type="button" id="cancelar" onclick="cancelar()">Cancelar</button>
+        </div>
+    </div>
+
+    <footer class="pie-de-pagina">
+        <p class="copyright">&copy; Página desarrollada por Matias Noguera</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="sweetalert.js"></script>
+</body>
+</html>
